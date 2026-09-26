@@ -36,11 +36,11 @@ When you want a specific job done properly, pick a skill below.
 2. **Drive people to Substack:** every clip ends on the newsletter name and "Read it free at…". `title-sequence-3d` and `vox-explainer` make the scroll-stoppers that carry it.
 3. **Start your own launch video:** `launch-video` is the one to run first if you're launching an offer, a cohort or a product.
 
-## Make it yours: the motion file
+## Make it yours: your brand design system
 
-The skills pick sensible defaults. To make everything come out in your own look, give Claude one file of rules first.
+The skills pick sensible defaults. To make everything come out in your own look, give Claude a brand design system first. It's one file of rules (your colours, type, timing and what never to do) that Claude reads before it animates anything.
 
-**1. Write your motion file.** Put five frames from motion you already like in a folder called `examples` (screenshots are fine). Then paste this into Claude Code:
+**1. Build your design system from references.** Put five frames from motion you already like in a folder called `examples` (screenshots from Dribbble or Pinterest are fine). Then paste this into Claude Code:
 
 ```
 I am giving you five frames from motion graphics I already like. They are in the examples folder.
@@ -69,17 +69,41 @@ Before designing, generating or animating anything, read MOTION.md in full.
 
 Every colour, font, timing and motion value comes from that file.
 
+The file sets the look, not the ambition. When I say go all out, go all out.
+
 If something I ask for is not covered there, ask me rather than choosing for yourself.
 
 When you have finished, check your own frames against MOTION.md, fix what fails, and only then show me.
 ```
+
+That middle line matters. Without it, my first try with the file came out far too polite.
+
+## The brief behind my "Why do we dream?" film
+
+One line gets you close. A proper brief gets you something people share. This is exactly what I typed (with `vox-explainer` installed):
+
+```
+Why do we dream? And then someone suddenly wakes up, zooms out of the eye, and goes into outer space. There are neural networks of interconnectivity to convey the brain.
+```
+
+It found a source for every fact before it drew anything, wrote the script, added a voice and rendered it. Then give it notes like you would a designer.
+
+## Pairs well with: Apple's motion rules
+
+A free skill (not mine) that turns Apple's design guidelines into rules Claude follows:
+
+```
+npx skills add emilkowalski/skills --skill apple-design
+```
+
+Then ask: "Use the apple-design skill to audit this animation. Give me a ranked list of everything that feels off, worst first." Paste the fixes back as notes.
 
 ## Install
 
 1. Download this repo (green **Code** button, then **Download ZIP**) and unzip it.
 2. Copy the six folders inside `skills/` into `~/.claude/skills/` (or your project's `.claude/skills/`).
 3. Open Claude Code, pick Opus 5.5 with `/model`.
-4. For MP4 export, add HyperFrames once (free, open source): `npx skills add heygen-com/hyperframes`.
+4. For MP4 export, add HyperFrames once (free, open source): `npx skills add heygen-com/hyperframes`. No export tools at all? [My export kit (Mac and Windows)](https://drive.google.com/file/d/18ugNPOOHqLTbkekSYPzvC1wJStMjWg8y/view?usp=drivesdk) turns any of these HTML files into an MP4.
 5. Say what you want: "make a launch video for my coaching programme". The right skill loads itself.
 
 ## House rules every skill follows
@@ -91,5 +115,7 @@ When you have finished, check your own frames against MOTION.md, fix what fails,
 5. **First 3 seconds carry the hook.** If the first frame is empty, it's cut.
 6. **Check before export.** One frame from the middle of every shot, checked for cut-off text, overlaps and wrong facts.
 7. **Real assets only.** Logos and screenshots come from your files, never redrawn from memory.
+
+**One honest limit:** a photoreal human face. Code draws motion, type and UI brilliantly, but a lifelike person still needs an image model (for now).
 
 Made by Charlie Hills · charliehills.substack.com
