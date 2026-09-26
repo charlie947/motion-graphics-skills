@@ -98,6 +98,14 @@ npx skills add emilkowalski/skills --skill apple-design
 
 Then ask: "Use the apple-design skill to audit this animation. Give me a ranked list of everything that feels off, worst first." Paste the fixes back as notes.
 
+## Pairs well with: real UI components
+
+If your video shows a product, don't let Claude draw the buttons and cards from scratch. It guesses the spacing and the UI looks fake. [21st.dev](https://21st.dev) publishes real components with a prompt under each one. Paste this once, then paste any component prompt straight in:
+
+```
+Add this rule to CLAUDE.md: whenever I paste a component prompt or third-party component code, treat it as a structural donor only. Keep its engineering. Replace its demo copy with my real copy, and translate every colour, border, shadow, font and timing to MOTION.md.
+```
+
 ## Install
 
 1. Download this repo (green **Code** button, then **Download ZIP**) and unzip it.
