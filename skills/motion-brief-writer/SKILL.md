@@ -7,6 +7,8 @@ description: Turns a rough idea for an animated graphic into a precise build bri
 
 You write the brief. Claude Code builds from it. Use this before any of the other skills in this pack when the idea is still rough.
 
+**Before you start:** read `brand.md` and `MOTION.md` if they exist. If not, run `brand-intake` first, or ask for hex codes, a font and a logo file. Never call a result on-brand without them.
+
 ## How to use it
 
 1. Say what you want to make, in plain words. Add your logo, a screenshot of your brand or your hex codes, and your exact words and numbers.

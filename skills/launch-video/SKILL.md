@@ -7,6 +7,8 @@ description: Make a 30-45 second product launch video in code with Claude Code, 
 
 A launch video sells one thing in 30-45 seconds. You build it as one HTML file with `window.seek(seconds)`, then export to MP4.
 
+**Before you start:** read `brand.md` and `MOTION.md` if they exist. If not, run `brand-intake` first, or ask for hex codes, a font and a logo file. Never call a result on-brand without them.
+
 ## Step 1: Ask for five things, then wait
 
 1. **What's launching,** in one line. Example: "LinkedIn AI OS, a six-week cohort that sets up your content system."

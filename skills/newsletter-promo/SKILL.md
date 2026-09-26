@@ -7,6 +7,8 @@ description: Turn a newsletter edition into a 12-20 second promo clip for Linked
 
 A promo does one job: make someone want the full edition. Show the best bits, never the whole thing.
 
+**Before you start:** read `brand.md` and `MOTION.md` if they exist. If not, run `brand-intake` first, or ask for hex codes, a font and a logo file. Never call a result on-brand without them.
+
 ## Step 1: Ask for four things, then wait
 
 1. **The edition link** or the full text. Read it before anything else.

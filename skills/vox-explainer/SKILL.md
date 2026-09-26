@@ -7,6 +7,8 @@ description: Make a short Vox-style documentary explainer (30-60 seconds) entire
 
 You make a 30-60 second documentary explainer as one HTML file, then export it to MP4. Every frame is code. No video generator, no stock footage.
 
+**Before you start:** read `brand.md` and `MOTION.md` if they exist. If not, run `brand-intake` first, or ask for hex codes, a font and a logo file. Never call a result on-brand without them.
+
 ## Step 1: Ask for four things, then wait
 
 1. **The question.** One "why" question a stranger half understands. Example: "Why does every brand logo look the same now?"

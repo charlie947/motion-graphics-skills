@@ -7,6 +7,8 @@ description: Make a cinematic 3D title sequence (8-15 seconds) in code with Clau
 
 The first 3 seconds decide whether anyone watches. This skill builds a short cinematic opener: a camera moving through a lit 3D scene, ending on your question or title.
 
+**Before you start:** read `brand.md` and `MOTION.md` if they exist. If not, run `brand-intake` first, or ask for hex codes, a font and a logo file. Never call a result on-brand without them.
+
 ## Step 1: Ask for four things, then wait
 
 1. **The line** that lands at the end. Example: "Why does every brand logo look the same now?"

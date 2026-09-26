@@ -7,6 +7,8 @@ description: Make a looping animated chart for LinkedIn or a newsletter in code 
 
 Three prompts from a blank page: build it, make it look again, export it.
 
+**Before you start:** read `brand.md` and `MOTION.md` if they exist. If not, run `brand-intake` first, or ask for hex codes, a font and a logo file. Never call a result on-brand without them.
+
 ## Step 1: Ask for the numbers, then wait
 
 The title, the labels, the exact values, and whether they are real results or sample data. Sample data gets an "Illustrative data" label on every frame. Never round, reformat or add a number.
