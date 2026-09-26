@@ -32,24 +32,28 @@ Skills are markdown files that give Claude a tested workflow for one job. Instal
 Run `brand-intake` once. It writes `brand.md` (who you are, what you sell, your assets) and `MOTION.md` (your colours, type, timing and motion rules), and adds a rule to CLAUDE.md so Claude reads both before it animates anything. Every other skill reads those two files first. Without them, a skill asks for your hex codes, font and logo, and never calls its result on-brand.
 
 ```
-                         ┌──────────────────────────────────────────┐
-                         │               brand-intake               │
-                         │           brand.md + MOTION.md           │
-                         │       (read by every skill below)        │
-                         └─────────────────────┬────────────────────┘
-                                               │
-       ┌───────────────┬───────────────┬───────┴───────┬───────────────┬───────────────┐
-       ▼               ▼               ▼               ▼               ▼               ▼
-┌─────────────┐ ┌─────────────┐ ┌─────────────┐ ┌─────────────┐ ┌─────────────┐ ┌─────────────┐
-│ Plan        │ │ Launch      │ │ Explain     │ │ Open        │ │ Compare     │ │ Promote     │
-├─────────────┤ ├─────────────┤ ├─────────────┤ ├─────────────┤ ├─────────────┤ ├─────────────┤
-│ motion-     │ │ launch-video│ │ vox-        │ │ title-      │ │ model-      │ │ newsletter- │
-│ brief-writer│ │ apple-      │ │ explainer   │ │ sequence-3d │ │ showdown    │ │ promo       │
-│             │ │ launch-film │ │ animated-   │ │             │ │             │ │ loop-cover  │
-│             │ │             │ │ chart       │ │             │ │             │ │ reel-export │
-│             │ │             │ │ milestone-  │ │             │ │             │ │             │
-│             │ │             │ │ reveal      │ │             │ │             │ │             │
-└─────────────┘ └─────────────┘ └─────────────┘ └─────────────┘ └─────────────┘ └─────────────┘
+                ┌──────────────────────────────────────┐
+                │             brand-intake             │
+                │         brand.md + MOTION.md         │
+                │     (read by every skill below)      │
+                └───────────────────┬──────────────────┘
+                                    │
+           ┌────────────────────────┼────────────────────────┐
+           ▼                        ▼                        ▼
+┌────────────────────┐   ┌────────────────────┐   ┌────────────────────┐
+│ Plan               │   │ Launch             │   │ Explain            │
+├────────────────────┤   ├────────────────────┤   ├────────────────────┤
+│ motion-brief-writer│   │ launch-video       │   │ vox-explainer      │
+│                    │   │ apple-launch-film  │   │ animated-chart     │
+│                    │   │                    │   │ milestone-reveal   │
+└────────────────────┘   └────────────────────┘   └────────────────────┘
+┌────────────────────┐   ┌────────────────────┐   ┌────────────────────┐
+│ Open               │   │ Compare            │   │ Promote            │
+├────────────────────┤   ├────────────────────┤   ├────────────────────┤
+│ title-sequence-3d  │   │ model-showdown     │   │ newsletter-promo   │
+│                    │   │                    │   │ loop-cover         │
+│                    │   │                    │   │ reel-export        │
+└────────────────────┘   └────────────────────┘   └────────────────────┘
 ```
 
 See each skill's `SKILL.md` for its trigger phrases, the inputs it asks for and what it learned the hard way.
