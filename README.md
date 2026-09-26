@@ -1,6 +1,10 @@
 # Motion Graphics Skill Pack
 
-Six skills that make launch-grade motion graphics with Claude Code. Every frame is code. No After Effects, no video generator.
+12 skills that make launch-grade motion graphics with Claude Code. Every frame is code. No After Effects, no video generator.
+
+Built by [Charlie Hills](https://charliehills.substack.com). Subscribe to the [MarTech AI newsletter](https://charliehills.substack.com) for weekly breakdowns of how I use these in practice.
+
+**Contributions welcome.** Found a way to improve a skill? [Open a PR](https://github.com/charlie947/motion-graphics-skills/pulls). Run into a problem? [Open an issue](https://github.com/charlie947/motion-graphics-skills/issues).
 
 ## Start here: one line, 60 seconds
 
@@ -19,66 +23,136 @@ It writes the animation as code, draws every frame and renders an MP4. Then chan
 
 When you want a specific job done properly, pick a skill below.
 
-## Pick by what you want
+## What are Skills?
 
-| You want to... | Use |
+Skills are markdown files that give Claude a tested workflow for one job. Install them and Claude recognises when you're making a launch video, a chart or a reel, then asks for the right inputs, follows the rules that came out of real rejected drafts and checks its own frames before it shows you anything.
+
+## How Skills Work Together
+
+Run `brand-intake` once. It writes `brand.md` (who you are, what you sell, your assets) and `MOTION.md` (your colours, type, timing and motion rules), and adds a rule to CLAUDE.md so Claude reads both before it animates anything. Every other skill reads those two files first. Without them, a skill asks for your hex codes, font and logo, and never calls its result on-brand.
+
+```
+                         ┌──────────────────────────────────────────┐
+                         │               brand-intake               │
+                         │           brand.md + MOTION.md           │
+                         │       (read by every skill below)        │
+                         └─────────────────────┬────────────────────┘
+                                               │
+       ┌───────────────┬───────────────┬───────┴───────┬───────────────┬───────────────┐
+       ▼               ▼               ▼               ▼               ▼               ▼
+┌─────────────┐ ┌─────────────┐ ┌─────────────┐ ┌─────────────┐ ┌─────────────┐ ┌─────────────┐
+│ Plan        │ │ Launch      │ │ Explain     │ │ Open        │ │ Compare     │ │ Promote     │
+├─────────────┤ ├─────────────┤ ├─────────────┤ ├─────────────┤ ├─────────────┤ ├─────────────┤
+│ motion-     │ │ launch-video│ │ vox-        │ │ title-      │ │ model-      │ │ newsletter- │
+│ brief-writer│ │ apple-      │ │ explainer   │ │ sequence-3d │ │ showdown    │ │ promo       │
+│             │ │ launch-film │ │ animated-   │ │             │ │             │ │ loop-cover  │
+│             │ │             │ │ chart       │ │             │ │             │ │ reel-export │
+│             │ │             │ │ milestone-  │ │             │ │             │ │             │
+│             │ │             │ │ reveal      │ │             │ │             │ │             │
+└─────────────┘ └─────────────┘ └─────────────┘ └─────────────┘ └─────────────┘ └─────────────┘
+```
+
+See each skill's `SKILL.md` for its trigger phrases, the inputs it asks for and what it learned the hard way.
+
+## Available Skills
+
+| Skill | What it does |
 |---|---|
-| Turn a rough idea into a build brief in your brand | `motion-brief-writer` |
-| Launch a product, offer or cohort | `launch-video` |
-| Explain a "why" question people half understand | `vox-explainer` |
-| Stop the scroll in the first 3 seconds | `title-sequence-3d` |
-| Show a result, a stat or a trend | `animated-chart` |
-| Get people to read your newsletter | `newsletter-promo` |
+| [brand-intake](skills/brand-intake/) | Interview plus 3 to 5 reference frames becomes `brand.md`, `MOTION.md` and the CLAUDE.md read-first rule. The foundation every other skill reads. |
+| [motion-brief-writer](skills/motion-brief-writer/) | Turn a rough idea into a precise build brief in your brand. |
+| [launch-video](skills/launch-video/) | Launch a product, offer or cohort in 30-45 seconds. |
+| [apple-launch-film](skills/apple-launch-film/) | Rebuild an Apple-style Mac launch (menu bar, notch, widgets, wallpapers) entirely in code. |
+| [vox-explainer](skills/vox-explainer/) | Explain a "why" question people half understand, documentary style. |
+| [animated-chart](skills/animated-chart/) | Show a result, a stat or a trend as a looping chart. |
+| [milestone-reveal](skills/milestone-reveal/) | A night sky of points that pulls into your real, sourced number. |
+| [title-sequence-3d](skills/title-sequence-3d/) | Stop the scroll in the first 3 seconds with a cinematic 3D opener. |
+| [model-showdown](skills/model-showdown/) | Same brief to three AI models, first try each, stacked into one comparison video. |
+| [newsletter-promo](skills/newsletter-promo/) | Get people to read your newsletter with a 15-second promo. |
+| [loop-cover](skills/loop-cover/) | Turn a cover into a seamless looping GIF where only one element moves. |
+| [reel-export](skills/reel-export/) | Turn any video into a clean 1080 x 1920 Reel or TikTok with safe-zone text. |
 
-## Three ways I use it
+## Installation
 
-1. **Promote a newsletter edition:** `newsletter-promo` turns the edition into a 15-second clip for LinkedIn and Instagram.
-2. **Drive people to Substack:** every clip ends on the newsletter name and "Read it free at…". `title-sequence-3d` and `vox-explainer` make the scroll-stoppers that carry it.
-3. **Start your own launch video:** `launch-video` is the one to run first if you're launching an offer, a cohort or a product.
+### Claude Code
 
-## Make it yours: your brand design system
+Download this repo (green **Code** button, then **Download ZIP**) and unzip it, or clone it:
 
-The skills pick sensible defaults. To make everything come out in your own look, give Claude a brand design system first. It's one file of rules (your colours, type, timing and what never to do) that Claude reads before it animates anything.
-
-**1. Build your design system from references.** Put five frames from motion you already like in a folder called `examples` (screenshots from Dribbble or Pinterest are fine). Then paste this into Claude Code:
-
-```
-I am giving you five frames from motion graphics I already like. They are in the examples folder.
-
-Write me one file called MOTION.md that any AI can read before it animates anything for me. It must cover:
-
-1. Every colour as a hex code, and what each one is for
-2. The fonts and the type sizes
-3. Timing: how things come in, how long they hold, and how they leave
-4. How things move: the frame rate, the easing, and anything that makes it feel handmade
-5. Texture and finish
-6. Five things my motion must never do, named plainly
-7. One example, described shot by shot, of it done right
-
-Work only from what is in the frames. Where you cannot tell, write ASK ME rather than guessing.
-
-Show me the file before you save it.
+```bash
+git clone https://github.com/charlie947/motion-graphics-skills.git
 ```
 
-**2. Make Claude read it first.** Paste this:
+Copy the 12 folders inside `skills/` into `~/.claude/skills/` (every project) or your project's `.claude/skills/` (one project). This loop keeps any skill folder you already have:
+
+```bash
+mkdir -p ~/.claude/skills
+for skill in motion-graphics-skills/skills/*; do
+  [ -f "$skill/SKILL.md" ] || continue
+  destination="$HOME/.claude/skills/$(basename "$skill")"
+  if [ -e "$destination" ]; then
+    printf 'Preserved existing skill: %s\n' "$destination"
+  else
+    cp -R "$skill" "$destination"
+  fi
+done
+```
+
+Open Claude Code and pick Opus 5.5 with `/model`.
+
+### Claude Desktop
+
+Zip one skill folder and upload it in Customise, then Skills. From `motion-graphics-skills/skills`:
+
+```bash
+zip -r brand-intake.skill brand-intake
+```
+
+Start with `brand-intake`, then add the skills you need.
+
+### Codex
+
+From your project's root, after cloning this repo into it:
+
+```bash
+test -d motion-graphics-skills/skills || { printf 'Missing source skills folder\n'; exit 1; }
+mkdir -p .agents/skills || exit 1
+for skill in motion-graphics-skills/skills/*; do
+  [ -f "$skill/SKILL.md" ] || continue
+  name="$(basename "$skill")"
+  destination=".agents/skills/$name"
+  if [ -e "$destination" ] || [ -L "$destination" ]; then
+    printf 'Preserved existing skill: %s\n' "$destination"
+  else
+    cp -R "$skill" "$destination" || exit 1
+  fi
+done
+```
+
+Open a fresh Codex task and check the skills load from `.agents/skills/<name>/SKILL.md`.
+
+### Export to MP4
+
+Add HyperFrames once (free, open source): `npx skills add heygen-com/hyperframes`. No export tools at all? [My export kit (Mac and Windows)](https://drive.google.com/file/d/18ugNPOOHqLTbkekSYPzvC1wJStMjWg8y/view?usp=drivesdk) turns any of these HTML files into an MP4.
+
+## Usage
+
+Run `brand-intake` first, then say what you want. The right skill loads itself:
 
 ```
-Add this to CLAUDE.md, and create the file if it does not exist:
-
-Before designing, generating or animating anything, read MOTION.md in full.
-
-Every colour, font, timing and motion value comes from that file.
-
-The file sets the look, not the ambition. When I say go all out, go all out.
-
-If something I ask for is not covered there, ask me rather than choosing for yourself.
-
-When you have finished, check your own frames against MOTION.md, fix what fails, and only then show me.
+"Set up my brand" → brand-intake
+"Brief this animation" → motion-brief-writer
+"Make a launch video for my coaching programme" → launch-video
+"Make an Apple-style launch for my app" → apple-launch-film
+"Why does every logo look the same now?" → vox-explainer
+"Animate my Q3 chart" → animated-chart
+"Celebrate 10,000 subscribers" → milestone-reveal
+"Give me a cinematic opener" → title-sequence-3d
+"Same prompt, three AIs" → model-showdown
+"Promo for this edition" → newsletter-promo
+"Make my cover move" → loop-cover
+"Make this a reel" → reel-export
 ```
 
-That middle line matters. Without it, my first try with the file came out far too polite.
-
-## The brief behind my "Why do we dream?" film
+### The brief behind my "Why do we dream?" film
 
 One line gets you close. A proper brief gets you something people share. This is exactly what I typed (with `vox-explainer` installed):
 
@@ -87,6 +161,59 @@ Why do we dream? And then someone suddenly wakes up, zooms out of the eye, and g
 ```
 
 It found a source for every fact before it drew anything, wrote the script, added a voice and rendered it. Then give it notes like you would a designer.
+
+## Skill Categories
+
+### Foundation
+- `brand-intake`: interview plus reference frames, writes brand.md and MOTION.md
+
+### Plan
+- `motion-brief-writer`: rough idea to build brief
+
+### Launch
+- `launch-video`: product, offer or cohort launch
+- `apple-launch-film`: Mac interface launch, all in code
+
+### Explain
+- `vox-explainer`: documentary "why" film
+- `animated-chart`: looping chart for a result or trend
+- `milestone-reveal`: particles that resolve into your number
+
+### Open
+- `title-sequence-3d`: cinematic 3D opener
+
+### Compare
+- `model-showdown`: three models, one brief, one video
+
+### Promote
+- `newsletter-promo`: 15-second edition promo
+- `loop-cover`: looping cover GIF
+- `reel-export`: vertical Reel and TikTok export
+
+## Capabilities
+
+Only install what the job needs. Nothing here needs an API key.
+
+| Workflow | Needs | If it is missing |
+|---|---|---|
+| Any skill, on-brand | `brand.md` and `MOTION.md` from `brand-intake` | The skill asks for hex codes, font and logo, and does not call the result on-brand |
+| Build any animation | Claude Code on Opus 5.5 | Nothing to build with |
+| MP4 export | HyperFrames, or ffmpeg plus Chrome | You get the HTML with `window.seek()`, export pending |
+| `loop-cover` measuring | ffmpeg and Python 3 | GIF made, seam and motion unmeasured, so not called done |
+| `reel-export` and `model-showdown` stacking | ffmpeg and ffprobe | Stacked layout as HTML, final encode and checks pending |
+| `model-showdown` | Access to each model through your own accounts | Compare the models you can reach, and say which were left out |
+| `apple-launch-film` motion check | The free `apple-design` skill | Builds without it, motion unchecked against Apple's rules |
+| Logos and screenshots | Your own files | The skill asks. It never redraws a logo from memory |
+
+## House rules every skill follows
+
+1. **Facts first.** Every name, date and number on screen comes from a list you approve. Nothing invented.
+2. **Your brand, not the average.** Colours and fonts come from `brand-intake` or from you. With nothing given, it asks.
+3. **Banned defaults:** typewriter text, glow, bounce, gradients on text, purple-to-blue backgrounds.
+4. **Motion on twos** for anything hand-made in feel (hold each pose for 2 frames at 24fps).
+5. **First 3 seconds carry the hook.** If the first frame is empty, it's cut.
+6. **Check before export.** One frame from the middle of every shot, checked for cut-off text, overlaps and wrong facts.
+7. **Real assets only.** Logos and screenshots come from your files, never redrawn from memory.
 
 ## Pairs well with: Apple's motion rules
 
@@ -106,24 +233,14 @@ If your video shows a product, don't let Claude draw the buttons and cards from 
 Add this rule to CLAUDE.md: whenever I paste a component prompt or third-party component code, treat it as a structural donor only. Keep its engineering. Replace its demo copy with my real copy, and translate every colour, border, shadow, font and timing to MOTION.md.
 ```
 
-## Install
-
-1. Download this repo (green **Code** button, then **Download ZIP**) and unzip it.
-2. Copy the six folders inside `skills/` into `~/.claude/skills/` (or your project's `.claude/skills/`).
-3. Open Claude Code, pick Opus 5.5 with `/model`.
-4. For MP4 export, add HyperFrames once (free, open source): `npx skills add heygen-com/hyperframes`. No export tools at all? [My export kit (Mac and Windows)](https://drive.google.com/file/d/18ugNPOOHqLTbkekSYPzvC1wJStMjWg8y/view?usp=drivesdk) turns any of these HTML files into an MP4.
-5. Say what you want: "make a launch video for my coaching programme". The right skill loads itself.
-
-## House rules every skill follows
-
-1. **Facts first.** Every name, date and number on screen comes from a list you approve. Nothing invented.
-2. **Your brand, not the average.** Colours and fonts come from you. With nothing given, it asks.
-3. **Banned defaults:** typewriter text, glow, bounce, gradients on text, purple-to-blue backgrounds.
-4. **Motion on twos** for anything hand-made in feel (hold each pose for 2 frames at 24fps).
-5. **First 3 seconds carry the hook.** If the first frame is empty, it's cut.
-6. **Check before export.** One frame from the middle of every shot, checked for cut-off text, overlaps and wrong facts.
-7. **Real assets only.** Logos and screenshots come from your files, never redrawn from memory.
-
 **One honest limit:** a photoreal human face. Code draws motion, type and UI brilliantly, but a lifelike person still needs an image model (for now).
 
-Made by Charlie Hills · charliehills.substack.com
+## Contributing
+
+PRs and issues welcome. Run `bash validate-skills.sh` before you submit. It checks every skill's frontmatter, that the name matches the folder, the description length, and the house style (no em dashes or semicolons in prose, no local paths).
+
+## License
+
+[MIT](LICENSE). Use these however you like. If they help you, a link back to the [newsletter](https://charliehills.substack.com) is appreciated.
+
+— Charlie
