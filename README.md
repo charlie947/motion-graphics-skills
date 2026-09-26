@@ -1,6 +1,6 @@
 # Motion Graphics Skill Pack
 
-Five skills that make launch-grade motion graphics with Claude Code. Every frame is code. No After Effects, no video generator.
+Six skills that make launch-grade motion graphics with Claude Code. Every frame is code. No After Effects, no video generator.
 
 ## Start here: one line, 60 seconds
 
@@ -23,6 +23,7 @@ When you want a specific job done properly, pick a skill below.
 
 | You want to... | Use |
 |---|---|
+| Turn a rough idea into a build brief in your brand | `motion-brief-writer` |
 | Launch a product, offer or cohort | `launch-video` |
 | Explain a "why" question people half understand | `vox-explainer` |
 | Stop the scroll in the first 3 seconds | `title-sequence-3d` |
@@ -38,7 +39,7 @@ When you want a specific job done properly, pick a skill below.
 ## Install
 
 1. Download this repo (green **Code** button, then **Download ZIP**) and unzip it.
-2. Copy the five folders inside `skills/` into `~/.claude/skills/` (or your project's `.claude/skills/`).
+2. Copy the six folders inside `skills/` into `~/.claude/skills/` (or your project's `.claude/skills/`).
 3. Open Claude Code, pick Opus 5.5 with `/model`.
 4. For MP4 export, add HyperFrames once (free, open source): `npx skills add heygen-com/hyperframes`.
 5. Say what you want: "make a launch video for my coaching programme". The right skill loads itself.
