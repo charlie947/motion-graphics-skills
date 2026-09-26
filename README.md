@@ -1,6 +1,6 @@
 # Motion Graphics Skill Pack
 
-12 skills that make launch-grade motion graphics with Claude Code. Every frame is code. No After Effects, no video generator.
+13 skills that make launch-grade motion graphics with Claude Code. Every frame is code. No After Effects, no video generator.
 
 Built by [Charlie Hills](https://charliehills.substack.com). Subscribe to the [MarTech AI newsletter](https://charliehills.substack.com) for weekly breakdowns of how I use these in practice.
 
@@ -46,6 +46,7 @@ Run `brand-intake` once. It writes `brand.md` (who you are, what you sell, your 
 │ motion-brief-writer│   │ launch-video       │   │ vox-explainer      │
 │                    │   │ apple-launch-film  │   │ animated-chart     │
 │                    │   │                    │   │ milestone-reveal   │
+│                    │   │                    │   │ motion-effects     │
 └────────────────────┘   └────────────────────┘   └────────────────────┘
 ┌────────────────────┐   ┌────────────────────┐   ┌────────────────────┐
 │ Open               │   │ Compare            │   │ Promote            │
@@ -69,6 +70,7 @@ See each skill's `SKILL.md` for its trigger phrases, the inputs it asks for and 
 | [vox-explainer](skills/vox-explainer/) | Explain a "why" question people half understand, documentary style. |
 | [animated-chart](skills/animated-chart/) | Show a result, a stat or a trend as a looping chart. |
 | [milestone-reveal](skills/milestone-reveal/) | A night sky of points that pulls into your real, sourced number. |
+| [motion-effects](skills/motion-effects/) | 16 premium effects (button to player, chart morph, masked type, particle logo and more) built from scratch in your brand as 8-second loops. |
 | [title-sequence-3d](skills/title-sequence-3d/) | Stop the scroll in the first 3 seconds with a cinematic 3D opener. |
 | [model-showdown](skills/model-showdown/) | Same brief to three AI models, first try each, stacked into one comparison video. |
 | [newsletter-promo](skills/newsletter-promo/) | Get people to read your newsletter with a 15-second promo. |
@@ -85,7 +87,7 @@ Download this repo (green **Code** button, then **Download ZIP**) and unzip it, 
 git clone https://github.com/charlie947/motion-graphics-skills.git
 ```
 
-Copy the 12 folders inside `skills/` into `~/.claude/skills/` (every project) or your project's `.claude/skills/` (one project). This loop keeps any skill folder you already have:
+Copy the 13 folders inside `skills/` into `~/.claude/skills/` (every project) or your project's `.claude/skills/` (one project). This loop keeps any skill folder you already have:
 
 ```bash
 mkdir -p ~/.claude/skills
@@ -149,6 +151,8 @@ Run `brand-intake` first, then say what you want. The right skill loads itself:
 "Why does every logo look the same now?" → vox-explainer
 "Animate my Q3 chart" → animated-chart
 "Celebrate 10,000 subscribers" → milestone-reveal
+"Build the chart morph with my numbers" → motion-effects
+"Make a button that turns into a video player" → motion-effects
 "Give me a cinematic opener" → title-sequence-3d
 "Same prompt, three AIs" → model-showdown
 "Promo for this edition" → newsletter-promo
@@ -166,6 +170,20 @@ Why do we dream? And then someone suddenly wakes up, zooms out of the eye, and g
 
 It found a source for every fact before it drew anything, wrote the script, added a voice and rendered it. Then give it notes like you would a designer.
 
+## Prompts
+
+Every prompt from the edition, ready to paste, one file per job. Each one says when to use it.
+
+| File | What is in it |
+|---|---|
+| [start-here.md](prompts/start-here.md) | The one-line starter, the edit-by-describing lines and what to do tonight |
+| [brand-design-system.md](prompts/brand-design-system.md) | The MOTION.md prompt and the CLAUDE.md read-first block |
+| [briefs.md](prompts/briefs.md) | The "Why do we dream?" brief and the real designer notes I gave |
+| [polish.md](prompts/polish.md) | The Apple motion audit, the real-components rule and the fix-one-thing prompt |
+| [effects.md](prompts/effects.md) | 16 prompts, one per effect, each built from scratch in your brand |
+
+Want the 16 effects as one editable animated board, plus a PDF guide? Get it free at https://charliehills.substack.com/p/opus-55-motion-graphics
+
 ## Skill Categories
 
 ### Foundation
@@ -182,6 +200,7 @@ It found a source for every fact before it drew anything, wrote the script, adde
 - `vox-explainer`: documentary "why" film
 - `animated-chart`: looping chart for a result or trend
 - `milestone-reveal`: particles that resolve into your number
+- `motion-effects`: 16 effects for interfaces, data, type and systems
 
 ### Open
 - `title-sequence-3d`: cinematic 3D opener
@@ -241,7 +260,7 @@ Add this rule to CLAUDE.md: whenever I paste a component prompt or third-party c
 
 ## Contributing
 
-PRs and issues welcome. Run `bash validate-skills.sh` before you submit. It checks every skill's frontmatter, that the name matches the folder, the description length, and the house style (no em dashes or semicolons in prose, no local paths).
+PRs and issues welcome. Run `bash validate-skills.sh` before you submit. It checks every skill's frontmatter, that the name matches the folder, the description length, and the house style (no em dashes or semicolons in prose, no local paths) across every skill, its reference files and the prompts folder.
 
 ## License
 
