@@ -2,6 +2,23 @@
 
 Five skills that make launch-grade motion graphics with Claude Code. Every frame is code. No After Effects, no video generator.
 
+## Start here: one line, 60 seconds
+
+Before any skill, paste this into Claude Code on Opus 5.5:
+
+```
+Make a dynamic 15-second motion graphics video that shows what an incredible motion designer you are. Go all out.
+```
+
+It writes the animation as code, draws every frame and renders an MP4. Then change it by describing the edit:
+
+- "Slow down the second scene."
+- "Swap the text for mine: [your words]."
+- "Use my brand colours: [hex codes]."
+- "Make it 1080 x 1350 for LinkedIn."
+
+When you want a specific job done properly, pick a skill below.
+
 ## Pick by what you want
 
 | You want to... | Use |
