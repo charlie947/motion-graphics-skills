@@ -36,6 +36,44 @@ When you want a specific job done properly, pick a skill below.
 2. **Drive people to Substack:** every clip ends on the newsletter name and "Read it free at…". `title-sequence-3d` and `vox-explainer` make the scroll-stoppers that carry it.
 3. **Start your own launch video:** `launch-video` is the one to run first if you're launching an offer, a cohort or a product.
 
+## Make it yours: the motion file
+
+The skills pick sensible defaults. To make everything come out in your own look, give Claude one file of rules first.
+
+**1. Write your motion file.** Put five frames from motion you already like in a folder called `examples` (screenshots are fine). Then paste this into Claude Code:
+
+```
+I am giving you five frames from motion graphics I already like. They are in the examples folder.
+
+Write me one file called MOTION.md that any AI can read before it animates anything for me. It must cover:
+
+1. Every colour as a hex code, and what each one is for
+2. The fonts and the type sizes
+3. Timing: how things come in, how long they hold, and how they leave
+4. How things move: the frame rate, the easing, and anything that makes it feel handmade
+5. Texture and finish
+6. Five things my motion must never do, named plainly
+7. One example, described shot by shot, of it done right
+
+Work only from what is in the frames. Where you cannot tell, write ASK ME rather than guessing.
+
+Show me the file before you save it.
+```
+
+**2. Make Claude read it first.** Paste this:
+
+```
+Add this to CLAUDE.md, and create the file if it does not exist:
+
+Before designing, generating or animating anything, read MOTION.md in full.
+
+Every colour, font, timing and motion value comes from that file.
+
+If something I ask for is not covered there, ask me rather than choosing for yourself.
+
+When you have finished, check your own frames against MOTION.md, fix what fails, and only then show me.
+```
+
 ## Install
 
 1. Download this repo (green **Code** button, then **Download ZIP**) and unzip it.
