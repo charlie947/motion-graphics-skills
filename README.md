@@ -147,33 +147,23 @@ When you want a specific job done properly, pick a skill below.
 
 ## The skills
 
-<table>
-  <tr>
-    <td width="33%" valign="top"><a href="skills/brand-intake/"><strong>brand-intake</strong></a><br><sub>Writes brand.md and MOTION.md. Every other skill reads them.</sub></td>
-    <td width="33%" valign="top"><a href="skills/motion-brief-writer/"><strong>motion-brief-writer</strong></a><br><sub>Turn a rough idea into a precise build brief in your brand.</sub></td>
-    <td width="33%" valign="top"><a href="skills/launch-video/"><strong>launch-video</strong></a><br><sub>Launch a product, offer or cohort in 30 to 45 seconds.</sub></td>
-  </tr>
-  <tr>
-    <td width="33%" valign="top"><a href="skills/apple-launch-film/"><strong>apple-launch-film</strong></a><br><sub>A Mac-style launch (menu bar, notch, widgets) all in code.</sub></td>
-    <td width="33%" valign="top"><a href="skills/vox-explainer/"><strong>vox-explainer</strong></a><br><sub>Explain a "why" question people half understand.</sub></td>
-    <td width="33%" valign="top"><a href="skills/animated-chart/"><strong>animated-chart</strong></a><br><sub>Show a result, a stat or a trend as a looping chart.</sub></td>
-  </tr>
-  <tr>
-    <td width="33%" valign="top"><a href="skills/milestone-reveal/"><strong>milestone-reveal</strong></a><br><sub>A night sky of points that pulls into your real number.</sub></td>
-    <td width="33%" valign="top"><a href="skills/motion-effects/"><strong>motion-effects</strong></a><br><sub>16 premium effects in your brand as 8-second loops.</sub></td>
-    <td width="33%" valign="top"><a href="skills/title-sequence-3d/"><strong>title-sequence-3d</strong></a><br><sub>A cinematic 3D opener that stops the scroll in 3 seconds.</sub></td>
-  </tr>
-  <tr>
-    <td width="33%" valign="top"><a href="skills/model-showdown/"><strong>model-showdown</strong></a><br><sub>Same brief to three AI models, stacked into one video.</sub></td>
-    <td width="33%" valign="top"><a href="skills/newsletter-promo/"><strong>newsletter-promo</strong></a><br><sub>Get people to read your newsletter with a 15-second promo.</sub></td>
-    <td width="33%" valign="top"><a href="skills/loop-cover/"><strong>loop-cover</strong></a><br><sub>Turn a cover into a seamless looping GIF.</sub></td>
-  </tr>
-  <tr>
-    <td width="33%" valign="top"><a href="skills/reel-export/"><strong>reel-export</strong></a><br><sub>Any video into a clean 1080 x 1920 Reel or TikTok.</sub></td>
-    <td width="33%" valign="top"></td>
-    <td width="33%" valign="top"></td>
-  </tr>
-</table>
+Thirteen skills, in the order you use them. Type the line on the right into Claude Code and the right skill picks it up.
+
+| Stage | Skill | What you get | Say this |
+|---|---|---|---|
+| Set up | [**brand-intake**](skills/brand-intake/) | Builds brand.md and MOTION.md. Every other skill reads them first. | "Set up my brand for motion. Here are five frames I like." |
+| Plan | [**motion-brief-writer**](skills/motion-brief-writer/) | Turns a rough idea into a precise build brief in your brand. | "Write me a motion brief for my next milestone post." |
+| Launch | [**launch-video**](skills/launch-video/) | A 30 to 45 second launch for a product, offer or cohort. | "Make a launch video for my new cohort." |
+| Launch | [**apple-launch-film**](skills/apple-launch-film/) | A Mac-style launch film. Menu bar, notch and widgets, all code. | "Make it look like an Apple keynote launch." |
+| Explain | [**vox-explainer**](skills/vox-explainer/) | A 30 to 60 second documentary explainer. | "Make a Vox-style video: why do we dream?" |
+| Explain | [**animated-chart**](skills/animated-chart/) | A looping chart. Every value stays exactly as you give it. | "Animate my chart. Here are my numbers." |
+| Explain | [**milestone-reveal**](skills/milestone-reveal/) | A night sky of points that pulls into your real number. | "Make a milestone video for my follower count." |
+| Explain | [**motion-effects**](skills/motion-effects/) | 16 premium effects in your brand, as 8-second loops. | "Build the search-to-results effect in my brand." |
+| Open | [**title-sequence-3d**](skills/title-sequence-3d/) | An 8 to 15 second 3D opener that stops the scroll. | "Make a cinematic 3D intro for my next video." |
+| Compare | [**model-showdown**](skills/model-showdown/) | One brief, three AI models, stacked into one video. | "Same prompt, three AIs. Make a model showdown." |
+| Promote | [**newsletter-promo**](skills/newsletter-promo/) | A 12 to 20 second promo that sends people to an edition. | "Make a promo for this week’s newsletter." |
+| Promote | [**loop-cover**](skills/loop-cover/) | Your newsletter cover as a seamless looping GIF. | "Make my newsletter cover a looping GIF." |
+| Promote | [**reel-export**](skills/reel-export/) | Any video as a clean 1080 x 1920 Reel or TikTok. | "Make this a reel for Instagram." |
 
 See each skill's `SKILL.md` for its trigger phrases, the inputs it asks for and what it learned the hard way.
 
